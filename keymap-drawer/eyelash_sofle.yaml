@@ -40,7 +40,7 @@ layers:
   - {t: L, h: Sft+Gui+Ctl+L}
   - {t: ;, h: Sft+Gui+Ctl+;, s: ':'}
   - {t: '''', h: Sft+Gui+Ctl+', s: '"'}
-  - {t: '$$mdi:apple-keyboard-caps$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - $$mdi:apple-keyboard-shift$$
   - {t: Z, h: Sft+Gui+Ctl+Z}
   - {t: X, h: Sft+Gui+Ctl+X}
   - {t: C, h: Sft+Gui+Ctl+C}
@@ -60,7 +60,7 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: 'Sft+Gui+Ctl+$$mdi:keyboard-space$$'}
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: 'Sft+Gui+$$mdi:apple-keyboard-control$$', h: toggle}
+  - '&UnivTog'
   - {t: '$$mdi:keyboard-return$$', h: 'Sft+Gui+Ctl+$$mdi:keyboard-return$$'}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
@@ -105,7 +105,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:apple-keyboard-caps$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - Ctl+Gui+Alt+C
