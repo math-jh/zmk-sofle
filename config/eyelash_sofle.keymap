@@ -7,6 +7,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+#define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
+
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
@@ -112,6 +114,14 @@
     };
 
     behaviors {
+        as: auto_shift {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping_term_ms = <135>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
     };
 
     keymap {
@@ -119,7 +129,7 @@
 
         Base {
             bindings = <
-&gresc              &kp N1   &kp N2        &kp N3        &kp N4     &kp N5      &kp UP_ARROW     &kp N6  &kp N7     &kp N8     &kp N9    &kp N0    &kp BACKSPACE
+&gresc              AS(N1)   &kp N2        &kp N3        &kp N4     &kp N5      &kp UP_ARROW     &kp N6  &kp N7     &kp N8     &kp N9    &kp N0    &kp BACKSPACE
 &kp TAB             &kp Q    &kp W         &kp E         &kp R      &kp T       &kp DOWN_ARROW   &kp Y   &kp U      &kp I      &kp O     &kp P     &LRBKT
 &kp RCMD            &kp A    &kp S         &kp D         &kp F      &kp G       &kp LEFT_ARROW   &kp H   &kp J      &kp K      &kp L     &kp SEMI  &kp APOS
 &mt LSHFT CAPSLOCK  &kp Z    &kp X         &kp C         &kp V      &kp B       &kp RIGHT_ARROW  &kp N   &kp M      &kp COMMA  &kp DOT   &kp FSLH  &mo 1
