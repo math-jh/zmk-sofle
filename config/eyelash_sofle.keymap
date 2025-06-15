@@ -47,17 +47,17 @@
         compatible = "zmk,behavior-tap-dance";
         label = "UnivTog";
         #binding-cells = <0>;
-        bindings = <&kt LS(LG(LCTRL))>, <&oneortwo>;
+        bindings = <&kt LS(LG(LCTRL))>, <&twoterm>;
 
         tapping-term-ms = <500>;
     };
 
     macros {
-        oneortwo: oneortwo {
+        twoterm: twoterm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(LG(LS(RBKT))) &kt LS(LG(LCTRL))>;
-            label = "OneOrTwo";
+            label = "TwoTerm";
         };
     };
 
@@ -87,11 +87,11 @@
 
         Base {
             bindings = <
-&gresc              AS(N1)   AS(N2)        AS(N3)        AS(N4)     AS(N5)      &kp UP_ARROW     AS(N6)  AS(N7)     AS(N8)     AS(N9)    AS(N0)    &kp BACKSPACE
-&kp TAB             SN(Q)    SN(W)         SN(E)         SN(R)      SN(T)       &kp DOWN_ARROW   SN(Y)   SN(U)      SN(I)      SN(O)     SN(P)     &kp BACKSLASH
-&kp RCMD            SN(A)    SN(S)         SN(D)         SN(F)      SN(G)       &kp LEFT_ARROW   SN(H)   SN(J)      SN(K)      SN(L)     SN(SEMI)  SN(APOS)
-&mt LSHFT CAPSLOCK  SN(Z)    SN(X)         SN(C)         SN(V)      SN(B)       &kp RIGHT_ARROW  SN(N)   SN(M)      SN(COMMA)  SN(DOT)   SN(FSLH)  &mo 1
-&kp C_MUTE          &NavScr  &kp LEFT_ALT  &kp LEFT_GUI  SN(SPACE)  &kp LALT    &kp ENTER        &kt LS(LG(LCTRL))  SN(ENTER)  &kp LCTRL  &kp RALT  &trans
+&gresc     AS(N1)   AS(N2)        AS(N3)        AS(N4)     AS(N5)      &kp UP_ARROW     AS(N6)  AS(N7)       AS(N8)     AS(N9)    AS(N0)    &kp BACKSPACE
+&kp TAB    SN(Q)    SN(W)         SN(E)         SN(R)      SN(T)       &kp DOWN_ARROW   SN(Y)   SN(U)        SN(I)      SN(O)     SN(P)     &kp BACKSLASH
+&kp RCMD   SN(A)    SN(S)         SN(D)         SN(F)      SN(G)       &kp LEFT_ARROW   SN(H)   SN(J)        SN(K)      SN(L)     SN(SEMI)  SN(APOS)
+&kp LSHFT  SN(Z)    SN(X)         SN(C)         SN(V)      SN(B)       &kp RIGHT_ARROW  SN(N)   SN(M)        SN(COMMA)  SN(DOT)   SN(FSLH)  &mo 1
+&kp C_MUTE &NavScr  &kp LEFT_ALT  &kp LEFT_GUI  SN(SPACE)  &kp LALT    &kp ENTER        &UnivTog  SN(ENTER)  &kp LCTRL  &kp RALT  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -100,11 +100,11 @@
 
         Function {
             bindings = <
-&kp GRAVE   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LC(UP_ARROW)   &kp LC(SPACE)  &kp LG(R)    &trans  &kp C_PREVIOUS     &kp C_PP           &kp C_NEXT  SN(MINUS)  SN(EQUAL)  &kp DELETE
-&trans      &trans                &trans                &trans             &trans         &trans       &trans  &trans             &trans             &trans      SN(LBKT)   SN(RBKT)   &trans
-&trans      &trans                &trans                &trans             &trans         &trans       &trans  &trans             &kp LC(LG(LA(J)))  &trans      &trans     &trans     &trans
-&kp LSHFT   &trans                &trans                &kp LC(LG(LA(C)))  &trans         &trans       &trans  &kp LC(LG(LA(N)))  &trans             &trans      &trans     &trans     &trans
-&kp C_MUTE  &trans                &trans                &trans             &trans         &trans       &trans  &trans             &trans             &trans      &trans     &trans
+&kp GRAVE      &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LC(UP_ARROW)   &kp LC(SPACE)  &kp LG(R)    &trans  &kp C_PREVIOUS     &kp C_PP           &kp C_NEXT  SN(MINUS)  SN(EQUAL)  &kp DELETE
+&trans         &trans                &trans                &trans             &trans         &trans       &trans  &trans             &trans             &trans      SN(LBKT)   SN(RBKT)   &trans
+&trans         &trans                &trans                &trans             &trans         &trans       &trans  &trans             &kp LC(LG(LA(J)))  &trans      &trans     &trans     &trans
+&kp CAPSLOCK   &trans                &trans                &kp LC(LG(LA(C)))  &trans         &trans       &trans  &kp LC(LG(LA(N)))  &trans             &trans      &trans     &trans     &trans
+&kp C_MUTE     &trans                &trans                &trans             &trans         &trans       &trans  &trans             &trans             &trans      &trans     &trans
             >;
 
             display-name = "Fcn";
