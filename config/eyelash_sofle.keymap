@@ -39,67 +39,25 @@
         compatible = "zmk,behavior-tap-dance";
         label = "NAVSCR";
         #binding-cells = <0>;
-        tapping-term-ms = <300>;
+        tapping-term-ms = <500>;
         bindings = <&tog 2>, <&tog 3>;
     };
 
-    LRBKT: LRBKT {
+    UnivTog: UnivTog {
         compatible = "zmk,behavior-tap-dance";
-        label = "LRBKT";
+        label = "UnivTog";
         #binding-cells = <0>;
-        bindings = <&kp LBKT>, <&kp RBKT>;
+        bindings = <&kt LS(LG(LCTRL))>, <&oneortwo>;
 
-        tapping-term-ms = <200>;
+        tapping-term-ms = <500>;
     };
 
     macros {
-        mathbf: mathbf {
+        oneortwo: oneortwo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LG(LS(RBKT))) &kp LG(LC(LS(B))) &kp LG(LC(LS(F)))>;
-            label = "MATHBF";
-        };
-
-        mathcal: mathcal {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(LG(LS(RBKT))) &kp LG(LC(LS(C))) &kp LG(LC(LS(A)))>;
-            label = "MATHCAL";
-        };
-
-        mathscr: mathscr {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(LG(LS(RBKT))) &kp LG(LC(LS(S))) &kp LG(LC(LS(A)))>;
-            label = "MATHSCR";
-        };
-
-        mathfrak: mathfrak {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(LG(LS(RBKT))) &kp LG(LC(LS(F))) &kp LG(LC(LS(K)))>;
-            label = "MATHFRAK";
-        };
-
-        mathop: mathop {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(LG(LS(RBKT))) &kp LG(LC(LS(O))) &kp LG(LC(LS(P)))>;
-            label = "MATHOP";
-        };
-
-        mathrm: mathrm {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(LG(LS(RBKT))) &kp LG(LC(LS(R))) &kp LG(LC(LS(M)))>;
-            label = "MATHRM";
-        };
-
-        proof: proof {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(LG(LS(RBKT))) &kp LG(LC(LS(P))) &kp LG(LC(LS(F)))>;
-            label = "PROOF";
+            bindings = <&kp LC(LG(LS(RBKT))) &kt LS(LG(LCTRL))>;
+            label = "OneOrTwo";
         };
     };
 
@@ -142,8 +100,8 @@
 
         Function {
             bindings = <
-&kp GRAVE   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LC(UP_ARROW)   &kp LC(SPACE)  &kp LG(R)    &trans  &kp C_PREVIOUS     &kp C_PP           &kp C_NEXT  &kp MINUS  &kp EQUAL  &kp DELETE
-&trans      &trans                &trans                &trans             &trans         &trans       &trans  &trans             &trans             &trans      &kp LBKT   &kp RBKT   &trans
+&kp GRAVE   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LC(UP_ARROW)   &kp LC(SPACE)  &kp LG(R)    &trans  &kp C_PREVIOUS     &kp C_PP           &kp C_NEXT  SN(MINUS)  SN(EQUAL)  &kp DELETE
+&trans      &trans                &trans                &trans             &trans         &trans       &trans  &trans             &trans             &trans      SN(LBKT)   SN(RBKT)   &trans
 &trans      &trans                &trans                &trans             &trans         &trans       &trans  &trans             &kp LC(LG(LA(J)))  &trans      &trans     &trans     &trans
 &kp LSHFT   &trans                &trans                &kp LC(LG(LA(C)))  &trans         &trans       &trans  &kp LC(LG(LA(N)))  &trans             &trans      &trans     &trans     &trans
 &kp C_MUTE  &trans                &trans                &trans             &trans         &trans       &trans  &trans             &trans             &trans      &trans     &trans
