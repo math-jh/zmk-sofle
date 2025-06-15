@@ -15,7 +15,7 @@ layers:
   - {t: '0', s: )}
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:keyboard-tab$$
-  - Q
+  - {t: Q, h: Sft+Gui+Ctl+Q}
   - W
   - E
   - R
