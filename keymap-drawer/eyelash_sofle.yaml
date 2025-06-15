@@ -58,9 +58,9 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-command$$
   - {t: '$$mdi:keyboard-space$$', h: 'Sft+Gui+Ctl+$$mdi:keyboard-space$$'}
-  - $$mdi:apple-keyboard-command$$
+  - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - '&LaTeX'
+  - {t: LSFT(LG(LCTRL)), h: toggle}
   - {t: '$$mdi:keyboard-return$$', h: 'Sft+Gui+Ctl+$$mdi:keyboard-return$$'}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
@@ -125,7 +125,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&LaTeX'
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
