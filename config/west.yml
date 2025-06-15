@@ -6,8 +6,6 @@ manifest:
       # See:
       # - https://zmk.dev/docs/features/modules
       # - https://docs.zephyrproject.org/3.5.0/develop/west/manifest.html#projects
-    - name: gpeye
-      url-base: https://github.com/GPeye
     - name: mctechnology17
       url-base: https://github.com/mctechnology17
   projects:
@@ -17,6 +15,6 @@ manifest:
       import: app/west.yml
     - name: zmk-nice-oled
       remote: mctechnology17
-      revision: main
+      revision: mainß
   self:
     path: boards
