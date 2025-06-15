@@ -47,7 +47,7 @@
         compatible = "zmk,behavior-tap-dance";
         label = "UnivTog";
         #binding-cells = <0>;
-        bindings = <&kt LS(LG(LCTRL))>, <&twoterm>;
+        bindings = <&sk LS(LG(LCTRL))>, <&twoterm>;
 
         tapping-term-ms = <500>;
     };
@@ -56,7 +56,7 @@
         twoterm: twoterm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LG(LS(RBKT))) &kt LS(LG(LCTRL))>;
+            bindings = <&kp LC(LG(LS(RBKT))) &sk LS(LG(LCTRL))>;
             label = "TwoTerm";
         };
     };
