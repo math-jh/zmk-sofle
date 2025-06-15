@@ -35,17 +35,6 @@
         tap-ms = <100>;
     };
 
-    LaTeX: LaTeX {
-        compatible = "zmk,behavior-tap-dance";
-        label = "LATEX";
-        #binding-cells = <0>;
-        bindings =
-            <&mt LC(LG(LSHFT)) BACKSLASH>,
-            <&mt LG(LC(LA(LSHFT))) BACKSLASH>;
-
-        tapping-term-ms = <150>;
-    };
-
     NavScr: NavScr {
         compatible = "zmk,behavior-tap-dance";
         label = "NAVSCR";
@@ -144,7 +133,7 @@
 &kp TAB             SN(Q)    SN(W)         SN(E)         SN(R)      SN(T)       &kp DOWN_ARROW   SN(Y)   SN(U)      SN(I)      SN(O)     SN(P)     &kp BACKSLASH
 &kp RCMD            SN(A)    SN(S)         SN(D)         SN(F)      SN(G)       &kp LEFT_ARROW   SN(H)   SN(J)      SN(K)      SN(L)     SN(SEMI)  SN(APOS)
 &mt LSHFT CAPSLOCK  SN(Z)    SN(X)         SN(C)         SN(V)      SN(B)       &kp RIGHT_ARROW  SN(N)   SN(M)      SN(COMMA)  SN(DOT)   SN(FSLH)  &mo 1
-&kp C_MUTE          &NavScr  &kp LEFT_ALT  &kp LEFT_GUI  SN(SPACE)  &kp LCMD    &kp ENTER        &LaTeX  SN(ENTER)  &kp LCTRL  &kp RALT  &trans
+&kp C_MUTE          &NavScr  &kp LEFT_ALT  &kp LEFT_GUI  SN(SPACE)  &kp LALT    &kp ENTER        &kt LSFT(LG(LCTRL))  SN(ENTER)  &kp LCTRL  &kp RALT  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -157,7 +146,7 @@
 &trans      &trans                &trans                &trans             &trans         &trans       &trans  &trans             &trans             &trans      &kp LBKT   &kp RBKT   &trans
 &trans      &trans                &trans                &trans             &trans         &trans       &trans  &trans             &kp LC(LG(LA(J)))  &trans      &trans     &trans     &trans
 &kp LSHFT   &trans                &trans                &kp LC(LG(LA(C)))  &trans         &trans       &trans  &kp LC(LG(LA(N)))  &trans             &trans      &trans     &trans     &trans
-&kp C_MUTE  &trans                &trans                &trans             &trans         &trans       &trans  &LaTeX             &trans             &trans      &trans     &trans
+&kp C_MUTE  &trans                &trans                &trans             &trans         &trans       &trans  &trans             &trans             &trans      &trans     &trans
             >;
 
             display-name = "Fcn";
