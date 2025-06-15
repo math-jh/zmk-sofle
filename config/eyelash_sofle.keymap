@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
+#define SN(keycode) &sn LS(LG(LC(keycode))) keycode     // Autoshift Macro
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -122,6 +123,16 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+
+        sn: auto_snippet {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping_term_ms = <500>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
     };
 
     keymap {
@@ -130,7 +141,7 @@
         Base {
             bindings = <
 &gresc              AS(N1)   &kp N2        &kp N3        &kp N4     &kp N5      &kp UP_ARROW     &kp N6  &kp N7     &kp N8     &kp N9    &kp N0    &kp BACKSPACE
-&kp TAB             &kp Q    &kp W         &kp E         &kp R      &kp T       &kp DOWN_ARROW   &kp Y   &kp U      &kp I      &kp O     &kp P     &LRBKT
+&kp TAB             SN(Q)    &kp W         &kp E         &kp R      &kp T       &kp DOWN_ARROW   &kp Y   &kp U      &kp I      &kp O     &kp P     &LRBKT
 &kp RCMD            &kp A    &kp S         &kp D         &kp F      &kp G       &kp LEFT_ARROW   &kp H   &kp J      &kp K      &kp L     &kp SEMI  &kp APOS
 &mt LSHFT CAPSLOCK  &kp Z    &kp X         &kp C         &kp V      &kp B       &kp RIGHT_ARROW  &kp N   &kp M      &kp COMMA  &kp DOT   &kp FSLH  &mo 1
 &kp C_MUTE          &NavScr  &kp LEFT_ALT  &kp LEFT_GUI  &kp SPACE  &kp LCMD    &kp ENTER        &LaTeX  &kp ENTER  &kp LCTRL  &kp RALT  &trans
