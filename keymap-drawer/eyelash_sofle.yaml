@@ -40,7 +40,7 @@ layers:
   - {t: L, h: Sft+Gui+Ctl+L}
   - {t: ;, h: Sft+Gui+Ctl+;, s: ':'}
   - {t: '''', h: Sft+Gui+Ctl+', s: '"'}
-  - {t: '$$mdi:apple-keyboard-caps$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - $$mdi:apple-keyboard-shift$$
   - {t: Z, h: Sft+Gui+Ctl+Z}
   - {t: X, h: Sft+Gui+Ctl+X}
   - {t: C, h: Sft+Gui+Ctl+C}
@@ -79,11 +79,11 @@ layers:
   - {t: '-', h: Sft+Gui+Ctl+-, s: _}
   - {t: '=', h: Sft+Gui+Ctl+=, s: +}
   - $$mdi:backspace-reverse-outline$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:toggle-switch$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
+  - {h: '$$mdi:arrow-down-bold$$', s: '$$mdi:bluetooth-connect$$'}
+  - $$mdi:bluetooth-off$$
+  - RGB BRI
+  - RGB SPI
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -92,11 +92,11 @@ layers:
   - {t: '[', h: 'Sft+Gui+Ctl+[', s: '{'}
   - {t: ']', h: 'Sft+Gui+Ctl+]', s: '}'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:apple-keyboard-caps$$
+  - RGB TOG
+  - RGB EFF
+  - RGB BRD
+  - RGB SPD
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
