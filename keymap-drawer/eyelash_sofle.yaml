@@ -52,7 +52,7 @@ layers:
   - {t: ',', h: 'Sft+Gui+Ctl+,', s: <}
   - {t: ., h: Sft+Gui+Ctl+., s: '>'}
   - {t: /, h: Sft+Gui+Ctl+/, s: '?'}
-  - Fcn
+  - Fn
   - $$mdi:volume-off$$
   - '&NavScr'
   - $$mdi:apple-keyboard-option$$
@@ -65,12 +65,12 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:transfer$$', type: trans}
-  Fcn:
+  Fn:
   - {t: '`', s: '~'}
   - $$mdi:brightness-7$$
   - $$mdi:brightness-5$$
   - Ctl+$$mdi:arrow-up-bold$$
-  - Ctl+$$mdi:keyboard-space$$
+  - Gui+$$mdi:keyboard-space$$
   - Gui+R
   - {t: '$$mdi:transfer$$', type: trans}
   - PREVIOUS
@@ -195,7 +195,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  Scr:
+  Scroll:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -249,7 +249,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: Scr, h: toggle}
+  - {t: Scroll, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
