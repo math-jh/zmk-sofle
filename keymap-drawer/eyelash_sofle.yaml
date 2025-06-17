@@ -52,7 +52,7 @@ layers:
   - {t: ',', h: 'Alt+,', s: <}
   - {t: ., h: Alt+., s: '>'}
   - {t: /, h: Alt+/, s: '?'}
-  - '&lsksf'
+  - {t: '$$mdi:apple-keyboard-shift$$', h: Fn}
   - $$mdi:volume-off$$
   - '&NavScr'
   - $$mdi:apple-keyboard-option$$
@@ -117,7 +117,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
