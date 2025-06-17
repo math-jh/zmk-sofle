@@ -59,7 +59,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap LG(Y)>
+                = <&kp LG(Y)>
                 , <&sk LC(LG(LSHFT))>
                 ;
         };
@@ -68,8 +68,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap LG(Y)>
-                , <&macro_tap &kp LC(LG(LS(RBKT)))>
+                = <&kp LG(Y)>
+                , <&kp LC(LG(LS(RBKT)))>
                 ;
         };
     };
