@@ -12,8 +12,6 @@
 
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 #define SN(keycode) &sn LS(LG(LC(keycode))) keycode     // Autosnippet Macro
-#define REP(keycode) &repeat keycode
-#define MA(keycode) &sn LS(LG(LC(keycode))) REP(keycode)
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -56,24 +54,7 @@
         tapping-term-ms = <500>;
     };
 
-    tdq: TDQ {
-        compatible = "zmk,behavior-tap-dance";
-        label = "TD_Q";
-        #binding-cells = <0>;
-        tapping-term-ms = <500>;
-        bindings = <AS(Q)>, <MA(Q)>;
-    };
-
     macros {
-        repeat: repeat_macro {
-            compatible = "zmk,behavior-macro-one-param";
-            label = "REPEAT";
-            #binding-cells = <1>;
-            bindings = <
-                &macro_param_1to1 &kp MACRO_PLACEHOLDER
-                &macro_param_1to1 &kp MACRO_PLACEHOLDER
-            >;
-        };
     };
 
     behaviors {
