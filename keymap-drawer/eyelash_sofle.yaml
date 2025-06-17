@@ -52,7 +52,7 @@ layers:
   - {t: ',', h: 'Alt+,', s: <}
   - {t: ., h: Alt+., s: '>'}
   - {t: /, h: Alt+/, s: '?'}
-  - {t: '$$mdi:backspace$$', h: Fn}
+  - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:volume-off$$
   - '&NavScr'
   - $$mdi:apple-keyboard-option$$
@@ -61,10 +61,10 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - '&univ'
-  - {t: '$$mdi:keyboard-return$$', h: 'Alt+$$mdi:keyboard-return$$'}
+  - {t: '$$mdi:keyboard-space$$', h: 'Alt+$$mdi:keyboard-space$$'}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
-  - $$mdi:apple-keyboard-command$$
+  - '&ctd'
   Fn:
   - {t: '`', s: '~'}
   - $$mdi:brightness-7$$
@@ -117,7 +117,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -260,3 +260,6 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+combos:
+- p: [57, 61]
+  k: {t: '$$mdi:keyboard-return$$', type: enter}
