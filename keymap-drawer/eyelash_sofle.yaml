@@ -52,15 +52,15 @@ layers:
   - {t: ',', h: 'Alt+,', s: <}
   - {t: ., h: Alt+., s: '>'}
   - {t: /, h: Alt+/, s: '?'}
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - '&lsksf'
   - $$mdi:volume-off$$
   - '&NavScr'
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-command$$
   - {t: '$$mdi:keyboard-space$$', h: 'Alt+$$mdi:keyboard-space$$'}
-  - $$mdi:apple-keyboard-option$$
+  - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - '&univ'
+  - '&ltd'
   - {t: '$$mdi:keyboard-space$$', h: 'Alt+$$mdi:keyboard-space$$'}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
@@ -263,3 +263,5 @@ layers:
 combos:
 - p: [56, 60]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
+- p: [57, 59]
+  k: Alt+Ctl+Gui+$$mdi:apple-keyboard-shift$$
