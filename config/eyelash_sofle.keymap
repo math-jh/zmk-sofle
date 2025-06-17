@@ -60,7 +60,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_tap LG(Y)>
-                , <&macro_tap &sk LC(LG(LSHFT))>
+                , <&sk LC(LG(LSHFT))>
                 ;
         };
 
