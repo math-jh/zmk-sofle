@@ -44,7 +44,7 @@
         #binding-cells = <0>;
         tapping-term-ms = <500>;
         bindings = <&tog 2>, <&tog 3>;
-    };f
+    };
 
     UnivTog: UnivTog {
         compatible = "zmk,behavior-tap-dance";
