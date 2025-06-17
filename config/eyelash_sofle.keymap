@@ -50,11 +50,28 @@
         compatible = "zmk,behavior-tap-dance";
         label = "UnivTog";
         #binding-cells = <0>;
-        bindings = <&sk LC(LG(LSHFT))>, <&kp LC(LG(LS(RBKT)))>;
+        bindings = <&one_term>, <&two_term>;
         tapping-term-ms = <500>;
     };
 
     macros {
+        one_term: one_term {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap LG(Y)>
+                , <&macro_tap &sk LC(LG(LSHFT))>
+                ;
+        };
+
+        two_term: two_term {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap LG(Y)>
+                , <&macro_tap &kp LC(LG(LS(RBKT)))>
+                ;
+        };
     };
 
     behaviors {
