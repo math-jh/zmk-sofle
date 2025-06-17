@@ -44,13 +44,13 @@
         #binding-cells = <0>;
         tapping-term-ms = <500>;
         bindings = <&tog 2>, <&tog 3>;
-    };
+    };f
 
     UnivTog: UnivTog {
         compatible = "zmk,behavior-tap-dance";
         label = "UnivTog";
         #binding-cells = <0>;
-        bindings = <&sk LS(LG(LCTRL))>, <&kp LC(LG(LS(RBKT)))>;
+        bindings = <&mt &sk LA(LC(LG(LSHFT))) &sk LC(LG(LSHFT))>, <&kp LC(LG(LS(RBKT)))>, <&kp LA(LC(LG(LS(RBKT))))>;
         tapping-term-ms = <500>;
     };
 
@@ -83,11 +83,11 @@
 
         Base {
             bindings = <
-&gresc      AS(N1)   AS(N2)        AS(N3)        AS(N4)     AS(N5)      &kp UP_ARROW     AS(N6)  AS(N7)       AS(N8)     AS(N9)    AS(N0)    &kp BACKSPACE
-&kp TAB     SN(Q)    SN(W)         SN(E)         SN(R)      SN(T)       &kp DOWN_ARROW   SN(Y)   SN(U)        SN(I)      SN(O)     SN(P)     &kp BACKSLASH
-&kp RCMD    SN(A)    SN(S)         SN(D)         SN(F)      SN(G)       &kp LEFT_ARROW   SN(H)   SN(J)        SN(K)      SN(L)     SN(SEMI)  SN(APOS)
-&kp LSHFT   SN(Z)    SN(X)         SN(C)         SN(V)      SN(B)       &kp RIGHT_ARROW  SN(N)   SN(M)        SN(COMMA)  SN(DOT)   SN(FSLH)  &lt 1 LBKT
-&kp C_MUTE  &NavScr  &kp LEFT_ALT  &kp LEFT_GUI  SN(SPACE)  &kp LALT    &kp ENTER        &UnivTog  SN(ENTER)  &kp LCTRL  &kp RALT  &kp RCMD
+&gresc      AS(N1)   AS(N2)        AS(N3)        AS(N4)     AS(N5)      &kp UP_ARROW     AS(N6)  AS(N7)       AS(N8)     &mt MINUS N9  &mt EQUAL N0  &kp LBKT
+&kp TAB     SN(Q)    SN(W)         SN(E)         SN(R)      SN(T)       &kp DOWN_ARROW   SN(Y)   SN(U)        SN(I)      SN(O)         SN(P)         &kp BACKSLASH
+&kp RCMD    SN(A)    SN(S)         SN(D)         SN(F)      SN(G)       &kp LEFT_ARROW   SN(H)   SN(J)        SN(K)      SN(L)         SN(SEMI)      SN(APOS)
+&kp LSHFT   SN(Z)    SN(X)         SN(C)         SN(V)      SN(B)       &kp RIGHT_ARROW  SN(N)   SN(M)        SN(COMMA)  SN(DOT)       SN(FSLH)      &lt 1 BACKSPACE
+&kp C_MUTE  &NavScr  &kp LEFT_ALT  &kp LEFT_GUI  SN(SPACE)  &kp LALT    &kp ENTER        &UnivTog  SN(ENTER)  &kp LCTRL  &kp RALT      &kp RCMD
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
