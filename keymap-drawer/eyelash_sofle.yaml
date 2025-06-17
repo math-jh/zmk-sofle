@@ -52,7 +52,7 @@ layers:
   - {t: ',', h: 'Sft+Gui+Ctl+,', s: <}
   - {t: ., h: Sft+Gui+Ctl+., s: '>'}
   - {t: /, h: Sft+Gui+Ctl+/, s: '?'}
-  - Fn
+  - {t: '[', h: Fn, s: '{'}
   - $$mdi:volume-off$$
   - '&NavScr'
   - $$mdi:apple-keyboard-option$$
