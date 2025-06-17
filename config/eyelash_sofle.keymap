@@ -11,7 +11,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
-#define SN(keycode) &sn LS(LG(LC(keycode))) keycode     // Autosnippet Macro
+#define AL(keycode) &al LA(keycode) keycode     // AutoAlt Macro
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -50,7 +50,7 @@
         compatible = "zmk,behavior-tap-dance";
         label = "UnivTog";
         #binding-cells = <0>;
-        bindings = <&mt &sk LA(LC(LG(LSHFT))) &sk LC(LG(LSHFT))>, <&kp LC(LG(LS(RBKT)))>, <&kp LA(LC(LG(LS(RBKT))))>;
+        bindings = <&sk LC(LG(LSHFT))>, <&kp LC(LG(LS(RBKT)))>;
         tapping-term-ms = <500>;
     };
 
@@ -68,7 +68,7 @@
         };
 
 
-        sn: auto_snippet {
+        al: auto_alt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping_term_ms = <700>;
@@ -84,10 +84,10 @@
         Base {
             bindings = <
 &gresc      AS(N1)   AS(N2)        AS(N3)        AS(N4)     AS(N5)      &kp UP_ARROW     AS(N6)  AS(N7)       AS(N8)     &mt MINUS N9  &mt EQUAL N0  &kp LBKT
-&kp TAB     SN(Q)    SN(W)         SN(E)         SN(R)      SN(T)       &kp DOWN_ARROW   SN(Y)   SN(U)        SN(I)      SN(O)         SN(P)         &kp BACKSLASH
-&kp RCMD    SN(A)    SN(S)         SN(D)         SN(F)      SN(G)       &kp LEFT_ARROW   SN(H)   SN(J)        SN(K)      SN(L)         SN(SEMI)      SN(APOS)
-&kp LSHFT   SN(Z)    SN(X)         SN(C)         SN(V)      SN(B)       &kp RIGHT_ARROW  SN(N)   SN(M)        SN(COMMA)  SN(DOT)       SN(FSLH)      &lt 1 BACKSPACE
-&kp C_MUTE  &NavScr  &kp LEFT_ALT  &kp LEFT_GUI  SN(SPACE)  &kp LALT    &kp ENTER        &UnivTog  SN(ENTER)  &kp LCTRL  &kp RALT      &kp RCMD
+&kp TAB     AL(Q)    AL(W)         AL(E)         AL(R)      AL(T)       &kp DOWN_ARROW   AL(Y)   AL(U)        AL(I)      AL(O)         AL(P)         &kp BACKSLASH
+&kp RCMD    AL(A)    AL(S)         AL(D)         AL(F)      AL(G)       &kp LEFT_ARROW   AL(H)   AL(J)        AL(K)      AL(L)         AL(SEMI)      AL(APOS)
+&kp LSHFT   AL(Z)    AL(X)         AL(C)         AL(V)      AL(B)       &kp RIGHT_ARROW  AL(N)   AL(M)        AL(COMMA)  AL(DOT)       AL(FSLH)      &lt 1 BACKSPACE
+&kp C_MUTE  &NavScr  &kp LEFT_ALT  &kp LEFT_GUI  AL(SPACE)  &kp LALT    &kp ENTER        &UnivTog  AL(ENTER)  &kp LCTRL  &kp RALT      &kp RCMD
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -96,8 +96,8 @@
 
         Function {
             bindings = <
-&kp GRAVE     &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LC(UP_ARROW)   &kp LG(SPACE)    &kp LG(R)  &trans  &kp C_PREVIOUS     &kp C_PP           &kp C_NEXT  SN(MINUS)  SN(EQUAL)  &kp DELETE
-&out OUT_TOG  &bt BT_NXT            &bt BT_CLR            &rgb_ug RGB_BRI    &rgb_ug RGB_SPI  &trans     &trans  &trans             &trans             &trans      SN(LBKT)   SN(RBKT)   &trans
+&kp GRAVE     &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LC(UP_ARROW)   &kp LG(SPACE)    &kp LG(R)  &trans  &kp C_PREVIOUS     &kp C_PP           &kp C_NEXT  AL(MINUS)  AL(EQUAL)  &kp DELETE
+&out OUT_TOG  &bt BT_NXT            &bt BT_CLR            &rgb_ug RGB_BRI    &rgb_ug RGB_SPI  &trans     &trans  &trans             &trans             &trans      AL(LBKT)   AL(RBKT)   &trans
 &kp CAPSLOCK  &rgb_ug RGB_TOG       &rgb_ug RGB_EFF       &rgb_ug RGB_BRD    &rgb_ug RGB_SPD  &trans     &trans  &trans             &kp LC(LG(LA(J)))  &trans      &trans     &trans     &trans
 &kp LSHFT     &trans                &trans                &kp LC(LG(LA(C)))  &trans           &trans     &trans  &kp LC(LG(LA(N)))  &trans             &trans      &trans     &trans     &trans
 &kp C_MUTE    &trans                &trans                &trans             &trans           &trans     &trans  &trans             &trans             &trans      &trans     &trans
