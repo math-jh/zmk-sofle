@@ -265,3 +265,5 @@ combos:
   k: {t: '$$mdi:keyboard-return$$', type: enter}
 - p: [62, 63]
   k: Gui+$$mdi:apple-keyboard-option$$
+- p: [57, 59]
+  k: '&ltda'
