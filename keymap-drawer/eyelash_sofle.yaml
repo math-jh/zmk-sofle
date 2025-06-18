@@ -13,7 +13,7 @@ layers:
   - {t: '8', h: Sft+8, s: '*'}
   - {t: '9', h: '-', s: (}
   - {t: '0', h: '=', s: )}
-  - {t: '[', s: '{'}
+  - {t: '[', h: 'Sft+[', s: '{'}
   - $$mdi:keyboard-tab$$
   - {t: Q, h: Alt+Q}
   - {t: W, h: Alt+W}
@@ -52,19 +52,19 @@ layers:
   - {t: ',', h: 'Alt+,', s: <}
   - {t: ., h: Alt+., s: '>'}
   - {t: /, h: Alt+/, s: '?'}
-  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:volume-off$$
   - '&NavScr'
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-command$$
   - {t: '$$mdi:keyboard-space$$', h: 'Alt+$$mdi:keyboard-space$$'}
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:transfer$$', type: trans}
   - '&univ'
   - {t: '$$mdi:keyboard-space$$', h: 'Alt+$$mdi:keyboard-space$$'}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
-  - '&ctd'
+  - Fn
   Fn:
   - {t: '`', s: '~'}
   - $$mdi:brightness-7$$
@@ -129,7 +129,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   Nav:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -184,14 +184,14 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: Nav, h: toggle}
+  - '&msel1'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:mouse-right-click-outline$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -249,7 +249,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: Scroll, h: toggle}
+  - '&msel2'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -263,3 +263,5 @@ layers:
 combos:
 - p: [56, 60]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
+- p: [62, 63]
+  k: Gui+$$mdi:apple-keyboard-option$$
