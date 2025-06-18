@@ -70,9 +70,13 @@
         tapping-term-ms = <500>;
     };
 
-
-
-
+    ltda: latex_tapdance_alternative {
+        compatible = "zmk,behavior-tap-dance";
+        label = "latex_td_a";
+        #binding-cells = <0>;
+        bindings = <&sk LA(LC(LG(LSHFT)))>, <&two_alt>;
+        tapping-term-ms = <500>;
+    };
 
     macros {
         univ: universal_snippet {
@@ -81,6 +85,14 @@
             bindings
                 = <&macro_tap &kp LG(Y)>
                 , <&ltd>
+                ;
+        };
+        two_alt: two-term_alternative {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LC(LG(LS(RBKT)))>
+                , <&sk LALT>
                 ;
         };
     };
@@ -96,6 +108,11 @@
             timeout-ms = <200>;
             key-positions = <62 63>;
             bindings = <&kp LG(LALT)>;
+        };
+        combo_alter {
+            timeout-ms = <200>;
+            key-positions = <57 59>;
+            bindings = <&ltda>;
         };
     };
 
