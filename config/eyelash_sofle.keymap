@@ -46,21 +46,33 @@
         bindings = <&tog 2>, <&tog 3>;
     };
 
+    msel1: mouse_selector_1 {
+        compatible = "zmk,behavior-tap-dance";
+        label = "msel1";
+        #binding-cells = <0>;
+        tapping-term-ms = <500>;
+        bindings = <&to 0>, <&to 3>;
+    };
+
+    msel2: mouse_selector_2 {
+        compatible = "zmk,behavior-tap-dance";
+        label = "msel2";
+        #binding-cells = <0>;
+        tapping-term-ms = <500>;
+        bindings = <&to 0>, <&to 2>;
+    };
+
     ltd: latex_tapdance {
         compatible = "zmk,behavior-tap-dance";
-        label = "UnivTog";
+        label = "latex_td";
         #binding-cells = <0>;
         bindings = <&sk LC(LG(LSHFT))>, <&kp LC(LG(LS(RBKT)))>;
         tapping-term-ms = <500>;
     };
 
-    ctd: cmd_tapdance {
-        compatible = "zmk,behavior-tap-dance";
-        label = "cmdlayer";
-        #binding-cells = <0>;
-        bindings = <&kp RCMD>, <&mo 1>;
-        tapping-term-ms = <500>;
-    };
+
+
+
 
     macros {
         univ: universal_snippet {
@@ -79,6 +91,11 @@
             timeout-ms = <200>;
             key-positions = <56 60>;
             bindings = <&kp ENTER>;
+        };
+        combo_vival {
+            timeout-ms = <200>;
+            key-positions = <62 63>;
+            bindings = <&kp LG(LALT)>;
         };
     };
 
@@ -101,14 +118,6 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-
-        lsksf: layer_and_sticky_shift {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <300>;
-            bindings = <&mo>, <&sk>;
-        };
     };
 
     keymap {
@@ -116,11 +125,11 @@
 
         Base {
             bindings = <
-&gresc      AS(N1)   AS(N2)        AS(N3)        AS(N4)     AS(N5)         &kp UP_ARROW     AS(N6)  AS(N7)     AS(N8)     &mt MINUS N9  &mt EQUAL N0  &kp LBKT
+&gresc      AS(N1)   AS(N2)        AS(N3)        AS(N4)     AS(N5)         &kp UP_ARROW     AS(N6)  AS(N7)     AS(N8)     &mt MINUS N9  &mt EQUAL N0  AS(LBKT)
 &kp TAB     AL(Q)    AL(W)         AL(E)         AL(R)      AL(T)          &kp DOWN_ARROW   AL(Y)   AL(U)      AL(I)      AL(O)         AL(P)         &kp BACKSLASH
 &kp RCMD    AL(A)    AL(S)         AL(D)         AL(F)      AL(G)          &kp LEFT_ARROW   AL(H)   AL(J)      AL(K)      AL(L)         AL(SEMI)      AL(APOS)
-&kp LSHFT   AL(Z)    AL(X)         AL(C)         AL(V)      AL(B)          &kp RIGHT_ARROW  AL(N)   AL(M)      AL(COMMA)  AL(DOT)       AL(FSLH)      &kp LSHFT
-&kp C_MUTE  &NavScr  &kp LEFT_ALT  &kp LEFT_GUI  AL(SPACE)  &kp BACKSPACE  &kp ENTER        &univ   AL(SPACE)  &kp LCTRL  &kp RALT      &ctd
+&kp LSHFT   AL(Z)    AL(X)         AL(C)         AL(V)      AL(B)          &kp RIGHT_ARROW  AL(N)   AL(M)      AL(COMMA)  AL(DOT)       AL(FSLH)      &mt LSHFT ENTER
+&kp C_MUTE  &NavScr  &kp LEFT_ALT  &kp LEFT_GUI  AL(SPACE)  &kp BACKSPACE  &trans           &univ   AL(SPACE)  &kp LCTRL  &kp RALT      &mo 1
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -138,6 +147,8 @@
 
             display-name = "Fn";
             sensor-bindings = <&scroll_encoder>;
+
+
         };
 
         Navigation {
@@ -146,7 +157,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_DOWN   &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &kp PG_UP
 &trans  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_LEFT   &trans  &trans     &trans     &trans  &trans  &kp PG_DN
 &trans  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_RIGHT  &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &tog 2  &trans  &trans  &trans  &trans  &trans           &trans  &mkp RCLK  &trans     &trans  &trans
+&trans  &msel1  &trans  &trans  &trans  &trans  &trans           &trans  &trans     &trans     &trans  &trans
             >;
 
             label = "Nav";
@@ -159,7 +170,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &msc SCRL_UP     &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &msc SCRL_LEFT   &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &msc SCRL_RIGHT  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &tog 3  &trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans  &trans
+&trans  &msel2  &trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "Scroll";
