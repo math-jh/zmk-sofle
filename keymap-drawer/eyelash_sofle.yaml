@@ -60,7 +60,7 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: 'Alt+$$mdi:keyboard-space$$'}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - '&ltd'
+  - '&univ'
   - {t: '$$mdi:keyboard-space$$', h: 'Alt+$$mdi:keyboard-space$$'}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
