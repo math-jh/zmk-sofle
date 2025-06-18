@@ -120,7 +120,7 @@
 &kp TAB     AL(Q)    AL(W)         AL(E)         AL(R)      AL(T)          &kp DOWN_ARROW   AL(Y)   AL(U)      AL(I)      AL(O)         AL(P)         &kp BACKSLASH
 &kp RCMD    AL(A)    AL(S)         AL(D)         AL(F)      AL(G)          &kp LEFT_ARROW   AL(H)   AL(J)      AL(K)      AL(L)         AL(SEMI)      AL(APOS)
 &kp LSHFT   AL(Z)    AL(X)         AL(C)         AL(V)      AL(B)          &kp RIGHT_ARROW  AL(N)   AL(M)      AL(COMMA)  AL(DOT)       AL(FSLH)      &kp LSHFT
-&kp C_MUTE  &NavScr  &kp LEFT_ALT  &kp LEFT_GUI  AL(SPACE)  &kp BACKSPACE  &kp ENTER        &ltd    AL(SPACE)  &kp LCTRL  &kp RALT      &ctd
+&kp C_MUTE  &NavScr  &kp LEFT_ALT  &kp LEFT_GUI  AL(SPACE)  &kp BACKSPACE  &kp ENTER        &univ   AL(SPACE)  &kp LCTRL  &kp RALT      &ctd
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
