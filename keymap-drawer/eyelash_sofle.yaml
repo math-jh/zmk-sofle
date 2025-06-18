@@ -52,7 +52,7 @@ layers:
   - {t: ',', h: 'Alt+,', s: <}
   - {t: ., h: Alt+., s: '>'}
   - {t: /, h: Alt+/, s: '?'}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: Fn}
+  - $$mdi:apple-keyboard-shift$$
   - $$mdi:volume-off$$
   - '&NavScr'
   - $$mdi:apple-keyboard-option$$
@@ -78,7 +78,7 @@ layers:
   - $$mdi:skip-next$$
   - {t: '-', h: Alt+-, s: _}
   - {t: '=', h: Alt+=, s: +}
-  - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:toggle-switch$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
   - {h: '$$mdi:arrow-down-bold$$', s: '$$mdi:bluetooth-connect$$'}
   - $$mdi:bluetooth-off$$
@@ -117,13 +117,13 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -263,5 +263,3 @@ layers:
 combos:
 - p: [56, 60]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
-- p: [57, 59]
-  k: Alt+Ctl+Gui+$$mdi:apple-keyboard-shift$$
