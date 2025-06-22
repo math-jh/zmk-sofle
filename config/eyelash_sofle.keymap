@@ -83,7 +83,7 @@
             #binding-cells = <0>;
             wait-ms = <5>;
             bindings
-                = <&macro_tap &kp LG(E)>
+                = <&macro_tap &kp LC(E)>
                 , <&ltd>
                 ;
         };
