@@ -170,7 +170,7 @@
 &kp GRAVE     &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LC(UP_ARROW)   &kp LG(SPACE)    &kp LG(R)   &trans  &kp C_PREVIOUS     &kp C_PP           &kp C_NEXT  &kp MINUS  &kp EQUAL  &trans
 &out OUT_TOG  &bt BT_NXT            &bt BT_CLR            &rgb_ug RGB_BRI    &rgb_ug RGB_SPI  &trans      &trans  &trans             &trans             &trans      &kp LBKT   &kp RBKT   &trans
 &kp CAPSLOCK  &rgb_ug RGB_TOG       &rgb_ug RGB_EFF       &rgb_ug RGB_BRD    &rgb_ug RGB_SPD  &trans      &trans  &trans             &kp LC(LG(LA(J)))  &trans      &trans     &trans     &trans
-&kp LSHFT     &trans                &trans                &kp LC(LG(LA(C)))  &trans           &trans      &trans  &kp LC(LG(LA(N)))  &trans             &trans      &trans     &trans     &trans
+&kp LSHFT     &kp F20               &trans                &kp LC(LG(LA(C)))  &trans           &trans      &trans  &kp LC(LG(LA(N)))  &trans             &trans      &trans     &trans     &trans
 &kp C_MUTE    &trans                &trans                &trans             &trans           &kp DELETE  &trans  &trans             &trans             &trans      &trans     &trans
             >;
 
