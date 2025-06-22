@@ -66,7 +66,7 @@
         label = "latex_td";
         #binding-cells = <0>;
         bindings = <&sk LC(LG(LSHFT))>, <&kp LC(LG(LS(RBKT)))>;
-        tapping-term-ms = <500>;
+        tapping-term-ms = <250>;
     };
 
     ltda: latex_tapdance_alternative {
@@ -74,7 +74,7 @@
         label = "latex_td_a";
         #binding-cells = <0>;
         bindings = <&sk LA(LC(LG(LSHFT)))>, <&two_alt>;
-        tapping-term-ms = <500>;
+        tapping-term-ms = <250>;
     };
 
     macros {
