@@ -87,6 +87,17 @@
                 , <&ltd>
                 ;
         };
+
+        univ_a: universal_snippet_alternative {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            bindings
+                = <&macro_tap &kp LC(E)>
+                , <&ltd_a>
+                ;
+        };
+        
         two_alt: two-term_alternative {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -108,7 +119,7 @@
         combo_alter {
             timeout-ms = <200>;
             key-positions = <57 59>;
-            bindings = <&ltda>;
+            bindings = <&univ_a>;
         };
     };
 
