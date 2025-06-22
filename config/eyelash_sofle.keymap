@@ -83,7 +83,7 @@
             #binding-cells = <0>;
             wait-ms = <5>;
             bindings
-                = <&macro_tap &kp LC(BACKSLASH)>
+                = <&macro_tap &kp LA(LC(LG(SPACE)))>
                 , <&ltd>
                 ;
         };
@@ -93,7 +93,7 @@
             #binding-cells = <0>;
             wait-ms = <5>;
             bindings
-                = <&macro_tap &kp LC(BACKSLASH)>
+                = <&macro_tap &kp LA(LC(LG(SPACE)))>
                 , <&ltda>
                 ;
         };
