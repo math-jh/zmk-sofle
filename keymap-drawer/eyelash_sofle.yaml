@@ -15,53 +15,53 @@ layers:
   - {t: '0', h: '=', s: )}
   - {t: '[', h: 'Sft+[', s: '{'}
   - $$mdi:keyboard-tab$$
-  - {t: Q, h: Alt+Q}
-  - {t: W, h: Alt+W}
-  - {t: E, h: Alt+E}
-  - {t: R, h: Alt+R}
-  - {t: T, h: Alt+T}
+  - Q
+  - W
+  - E
+  - R
+  - T
   - $$mdi:arrow-down-bold$$
-  - {t: Y, h: Alt+Y}
-  - {t: U, h: Alt+U}
-  - {t: I, h: Alt+I}
-  - {t: O, h: Alt+O}
-  - {t: P, h: Alt+P}
+  - Y
+  - U
+  - I
+  - O
+  - P
   - {t: \, s: '|'}
   - $$mdi:apple-keyboard-command$$
-  - {t: A, h: Alt+A}
-  - {t: S, h: Alt+S}
-  - {t: D, h: Alt+D}
-  - {t: F, h: Alt+F}
-  - {t: G, h: Alt+G}
+  - A
+  - S
+  - D
+  - F
+  - G
   - $$mdi:arrow-left-bold$$
-  - {t: H, h: Alt+H}
-  - {t: J, h: Alt+J}
-  - {t: K, h: Alt+K}
-  - {t: L, h: Alt+L}
-  - {t: ;, h: Alt+;, s: ':'}
-  - {t: '''', h: Alt+', s: '"'}
+  - H
+  - J
+  - K
+  - L
+  - {t: ;, s: ':'}
+  - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-shift$$
-  - {t: Z, h: Alt+Z}
-  - {t: X, h: Alt+X}
-  - {t: C, h: Alt+C}
-  - {t: V, h: Alt+V}
-  - {t: B, h: Alt+B}
+  - Z
+  - X
+  - C
+  - V
+  - B
   - $$mdi:arrow-right-bold$$
-  - {t: N, h: Alt+N}
-  - {t: M, h: Alt+M}
-  - {t: ',', h: 'Alt+,', s: <}
-  - {t: ., h: Alt+., s: '>'}
-  - {t: /, h: Alt+/, s: '?'}
+  - N
+  - M
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
+  - {t: /, s: '?'}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:volume-off$$
   - '&NavScr'
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-command$$
-  - {t: '$$mdi:keyboard-space$$', h: 'Alt+$$mdi:keyboard-space$$'}
+  - $$mdi:keyboard-space$$
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:transfer$$', type: trans}
   - '&univ'
-  - {t: '$$mdi:keyboard-space$$', h: 'Alt+$$mdi:keyboard-space$$'}
+  - $$mdi:keyboard-space$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - Fn
@@ -76,8 +76,8 @@ layers:
   - PREVIOUS
   - $$mdi:play-pause$$
   - $$mdi:skip-next$$
-  - {t: '-', h: Alt+-, s: _}
-  - {t: '=', h: Alt+=, s: +}
+  - {t: '-', s: _}
+  - {t: '=', s: +}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:toggle-switch$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
   - {h: '$$mdi:arrow-down-bold$$', s: '$$mdi:bluetooth-connect$$'}
@@ -89,8 +89,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '[', h: 'Alt+[', s: '{'}
-  - {t: ']', h: 'Alt+]', s: '}'}
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-caps$$
   - RGB TOG
@@ -182,7 +182,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - Scroll
   - {t: '$$mdi:transfer$$', type: trans}
   - '&msel1'
   - {t: '$$mdi:transfer$$', type: trans}
@@ -247,7 +247,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: Nav, type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - '&msel2'
   - {t: '$$mdi:transfer$$', type: trans}
