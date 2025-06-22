@@ -142,9 +142,9 @@
         Base {
             bindings = <
 &gresc      AS(N1)   AS(N2)        AS(N3)        AS(N4)     AS(N5)         &kp UP_ARROW     AS(N6)  AS(N7)     AS(N8)     &asl MINUS N9  &asl EQUAL N0  AS(LBKT)
-&kp TAB     &kp Q    &kp W         &kp E         &kp R      &kp T          &kp DOWN_ARROW   &kp Y   &kp U      &kp I      &kp O          &kp P          &kp BACKSLASH
-&kp RCMD    &kp A    &kp S         &kp D         &kp F      &kp G          &kp LEFT_ARROW   &kp H   &kp J      &kp K      &kp L          &kp SEMI       &kp APOS
-&kp LSHFT   &kp Z    &kp X         &kp C         &kp V      &kp B          &kp RIGHT_ARROW  &kp N   &kp M      &kp COMMA  &kp DOT        &kp FSLH       &mt LSHFT ENTER
+&kp TAB     AS(Q)    AS(W)         AS(E)         AS(R)      AS(T)          &kp DOWN_ARROW   AS(Y)   AS(U)      AS(I)      AS(O)          AS(P)          AS(BACKSLASH)
+&kp RCMD    AS(A)    AS(S)         AS(D)         AS(F)      AS(G)          &kp LEFT_ARROW   AS(H)   AS(J)      AS(K)      AS(L)          AS(SEMI)       AS(APOS)
+&kp LSHFT   AS(Z)    AS(X)         AS(C)         AS(V)      AS(B)          &kp RIGHT_ARROW  AS(N)   AS(M)      AS(COMMA)  AS(DOT)        AS(FSLH)       &mt LSHFT ENTER
 &kp C_MUTE  &NavScr  &kp LEFT_ALT  &kp LEFT_GUI  &kp SPACE  &kp BACKSPACE  &trans           &univ   &kp SPACE  &kp LCTRL  &kp RALT       &mo 1
             >;
 
