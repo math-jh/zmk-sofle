@@ -8,6 +8,8 @@ manifest:
       # - https://docs.zephyrproject.org/3.5.0/develop/west/manifest.html#projects
     - name: mctechnology17
       url-base: https://github.com/mctechnology17
+    - name: caksoylar
+      url-base: https://github.com/caksoylar
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -15,6 +17,9 @@ manifest:
       import: app/west.yml
     - name: zmk-nice-oled
       remote: mctechnology17
+      revision: main
+    - name: zmk-rgbled-widget  # <-- new entry
+      remote: caksoylar
       revision: main
   self:
     path: boards
