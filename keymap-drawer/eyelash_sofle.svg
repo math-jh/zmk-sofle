@@ -701,8 +701,7 @@ rect.held, rect.combo.held {
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <a href="#Fn">
 <text x="0" y="-4" class="key tap layer-activator">Fn</text>
-</a><text x="0" y="-24" class="key shifted">LGUI</text>
-</g>
+</a></g>
 <g class="combo enter combopos-0">
 <path d="M462,283 l-129,0" class="combo"/>
 <path d="M462,283 l129,0" class="combo"/>
@@ -714,6 +713,10 @@ rect.held, rect.combo.held {
 <path d="M462,294 l54,0" class="combo"/>
 <rect rx="6" ry="6" x="448" y="281" width="28" height="26" class="combo"/>
 <text x="462" y="294" class="combo tap">&amp;univa</text>
+</g>
+<g class="combo combopos-2">
+<rect rx="6" ry="6" x="742" y="242" width="28" height="26" class="combo"/>
+<use href="#mdi:apple-keyboard-option" xlink:href="#mdi:apple-keyboard-option" x="747" y="246" height="18" width="18.0" class="combo tap glyph mdi:apple-keyboard-option"/>
 </g>
 </g>
 </g>
@@ -1077,6 +1080,10 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="448" y="281" width="28" height="26" class="combo"/>
 <text x="462" y="294" class="combo tap">&amp;univa</text>
 </g>
+<g class="combo combopos-2">
+<rect rx="6" ry="6" x="742" y="242" width="28" height="26" class="combo"/>
+<use href="#mdi:apple-keyboard-option" xlink:href="#mdi:apple-keyboard-option" x="747" y="246" height="18" width="18.0" class="combo tap glyph mdi:apple-keyboard-option"/>
+</g>
 </g>
 </g>
 <g transform="translate(40, 776)" class="layer-Nav">
@@ -1423,6 +1430,10 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="448" y="281" width="28" height="26" class="combo"/>
 <text x="462" y="294" class="combo tap">&amp;univa</text>
 </g>
+<g class="combo combopos-2">
+<rect rx="6" ry="6" x="742" y="242" width="28" height="26" class="combo"/>
+<use href="#mdi:apple-keyboard-option" xlink:href="#mdi:apple-keyboard-option" x="747" y="246" height="18" width="18.0" class="combo tap glyph mdi:apple-keyboard-option"/>
+</g>
 </g>
 </g>
 <g transform="translate(40, 1165)" class="layer-Scroll">
@@ -1758,6 +1769,10 @@ rect.held, rect.combo.held {
 <path d="M462,294 l54,0" class="combo"/>
 <rect rx="6" ry="6" x="448" y="281" width="28" height="26" class="combo"/>
 <text x="462" y="294" class="combo tap">&amp;univa</text>
+</g>
+<g class="combo combopos-2">
+<rect rx="6" ry="6" x="742" y="242" width="28" height="26" class="combo"/>
+<use href="#mdi:apple-keyboard-option" xlink:href="#mdi:apple-keyboard-option" x="747" y="246" height="18" width="18.0" class="combo tap glyph mdi:apple-keyboard-option"/>
 </g>
 </g>
 </g>
