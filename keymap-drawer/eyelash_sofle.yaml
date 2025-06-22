@@ -264,4 +264,4 @@ combos:
 - p: [56, 60]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
 - p: [57, 59]
-  k: '&ltda'
+  k: '&univ_a'

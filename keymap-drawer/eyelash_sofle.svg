@@ -713,7 +713,7 @@ rect.held, rect.combo.held {
 <path d="M462,294 l-54,0" class="combo"/>
 <path d="M462,294 l54,0" class="combo"/>
 <rect rx="6" ry="6" x="448" y="281" width="28" height="26" class="combo"/>
-<text x="462" y="294" class="combo tap">&amp;ltda</text>
+<text x="462" y="294" class="combo tap"><tspan style="font-size: 86%">&amp;univ_a</tspan></text>
 </g>
 </g>
 </g>
@@ -1075,7 +1075,7 @@ rect.held, rect.combo.held {
 <path d="M462,294 l-54,0" class="combo"/>
 <path d="M462,294 l54,0" class="combo"/>
 <rect rx="6" ry="6" x="448" y="281" width="28" height="26" class="combo"/>
-<text x="462" y="294" class="combo tap">&amp;ltda</text>
+<text x="462" y="294" class="combo tap"><tspan style="font-size: 86%">&amp;univ_a</tspan></text>
 </g>
 </g>
 </g>
@@ -1421,7 +1421,7 @@ rect.held, rect.combo.held {
 <path d="M462,294 l-54,0" class="combo"/>
 <path d="M462,294 l54,0" class="combo"/>
 <rect rx="6" ry="6" x="448" y="281" width="28" height="26" class="combo"/>
-<text x="462" y="294" class="combo tap">&amp;ltda</text>
+<text x="462" y="294" class="combo tap"><tspan style="font-size: 86%">&amp;univ_a</tspan></text>
 </g>
 </g>
 </g>
@@ -1757,7 +1757,7 @@ rect.held, rect.combo.held {
 <path d="M462,294 l-54,0" class="combo"/>
 <path d="M462,294 l54,0" class="combo"/>
 <rect rx="6" ry="6" x="448" y="281" width="28" height="26" class="combo"/>
-<text x="462" y="294" class="combo tap">&amp;ltda</text>
+<text x="462" y="294" class="combo tap"><tspan style="font-size: 86%">&amp;univ_a</tspan></text>
 </g>
 </g>
 </g>
