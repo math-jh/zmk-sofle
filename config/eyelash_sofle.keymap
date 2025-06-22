@@ -135,7 +135,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&mo>, <&tog>;
             display-name = "Layer-Tap";
         };
@@ -145,7 +145,7 @@
             #binding-cells = <0>;
             bindings = <&mo 1>, <&kp LGUI>;
             mods = <(MOD_RALT)>;
-            keep-mods = <(MOD_RALT)>
+            keep-mods = <(MOD_RALT)>;
         };
     };
 
