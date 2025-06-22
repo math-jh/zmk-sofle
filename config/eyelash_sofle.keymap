@@ -81,14 +81,16 @@
         univ: universal_snippet {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <0>;
             bindings
-                = <&macro_tap &kp LG(Y)>
+                = <&macro_tap &kp F24>
                 , <&ltd>
                 ;
         };
         two_alt: two-term_alternative {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <0>;
             bindings
                 = <&macro_tap &kp LC(LG(LS(RBKT)))>
                 , <&sk LALT>
@@ -102,11 +104,6 @@
             timeout-ms = <200>;
             key-positions = <56 60>;
             bindings = <&kp ENTER>;
-        };
-        combo_vival {
-            timeout-ms = <200>;
-            key-positions = <62 63>;
-            bindings = <&kp LG(LALT)>;
         };
         combo_alter {
             timeout-ms = <200>;
@@ -125,7 +122,6 @@
             bindings = <&kp>, <&kp>;
         };
 
-
         asl: auto_shift_alternative {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -143,6 +139,14 @@
             bindings = <&mo>, <&tog>;
             display-name = "Layer-Tap";
         };
+
+        mocmd: momentary_cmd {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mo 1>, <&kp LGUI>;
+            mods = <(MOD_RALT)>;
+            keep-mods = <(MOD_RALT)>
+        };
     };
 
     keymap {
@@ -154,7 +158,7 @@
 &kp TAB     AS(Q)    AS(W)         AS(E)         AS(R)      AS(T)          &kp DOWN_ARROW   AS(Y)   AS(U)      AS(I)      AS(O)          AS(P)          AS(BACKSLASH)
 &kp RCMD    AS(A)    AS(S)         AS(D)         AS(F)      AS(G)          &kp LEFT_ARROW   AS(H)   AS(J)      AS(K)      AS(L)          AS(SEMI)       AS(APOS)
 &kp LSHFT   AS(Z)    AS(X)         AS(C)         AS(V)      AS(B)          &kp RIGHT_ARROW  AS(N)   AS(M)      AS(COMMA)  AS(DOT)        AS(FSLH)       &mt LSHFT ENTER
-&kp C_MUTE  &NavScr  &kp LEFT_ALT  &kp LEFT_GUI  &kp SPACE  &kp BACKSPACE  &trans           &ltd    &kp SPACE  &kp LCTRL  &kp RALT       &mo 1
+&kp C_MUTE  &NavScr  &kp LEFT_ALT  &kp LEFT_GUI  &kp SPACE  &kp BACKSPACE  &trans           &univ   &kp SPACE  &kp LCTRL  &kp RALT       &mocmd
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
