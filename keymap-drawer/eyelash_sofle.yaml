@@ -267,3 +267,5 @@ combos:
   k: '&univa'
 - p: [62, 63]
   k: Gui+$$mdi:apple-keyboard-option$$
+- p: [53, 54]
+  k: Gui+$$mdi:apple-keyboard-option$$
