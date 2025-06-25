@@ -113,18 +113,23 @@
     combos {
         compatible = "zmk,combos";
         combo_enter {
-            timeout-ms = <200>;
+            timeout-ms = <400>;
             key-positions = <56 60>;
             bindings = <&kp ENTER>;
         };
         combo_alter {
-            timeout-ms = <200>;
+            timeout-ms = <400>;
             key-positions = <57 59>;
             bindings = <&univa>;
         };
         combo_vival {
-            timeout-ms = <200>;
+            timeout-ms = <400>;
             key-positions = <62 63>;
+            bindings = <&kp LG(LALT)>;
+        };
+        combo_left_screen {
+            timeout-ms = <400>;
+            key-positions = <53 54>;
             bindings = <&kp LG(LALT)>;
         };
     };
