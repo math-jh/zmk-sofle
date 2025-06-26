@@ -89,7 +89,7 @@
         compatible = "zmk,behavior-tap-dance";
         label = "multirole_0";
         #binding-cells = <0>;
-        bindings = <AS(N90)>, <AS(EQUAL)>;
+        bindings = <AS(N0)>, <AS(EQUAL)>;
         tapping-term-ms = <250>;
     };
 
