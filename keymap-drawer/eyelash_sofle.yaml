@@ -11,8 +11,8 @@ layers:
   - {t: '6', h: Sft+6, s: ^}
   - {t: '7', h: Sft+7, s: '&'}
   - {t: '8', h: Sft+8, s: '*'}
-  - {t: '9', h: '-', s: (}
-  - {t: '0', h: '=', s: )}
+  - '&multirole_9'
+  - '&multirole_0'
   - {t: '[', h: 'Sft+[', s: '{'}
   - $$mdi:keyboard-tab$$
   - Q
@@ -31,11 +31,11 @@ layers:
   - A
   - S
   - D
-  - {t: F, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
   - G
   - $$mdi:arrow-left-bold$$
   - H
-  - {t: J, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
   - K
   - L
   - {t: ;, s: ':'}
@@ -57,11 +57,11 @@ layers:
   - '&NavScr'
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-command$$
-  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-command$$'}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:transfer$$', type: trans}
   - '&univ'
-  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-command$$'}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - Fn
