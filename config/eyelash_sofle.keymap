@@ -141,7 +141,7 @@
         combo_bsls {
             timeout-ms = <400>;
             key-positions = <59 60>;
-            bindings = <&kp BSLS>;
+            bindings = <&kp BACKSLASH>;
         };
         combo_vival {
             timeout-ms = <400>;
