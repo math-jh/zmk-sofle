@@ -130,7 +130,7 @@
         combo_left_screen {
             timeout-ms = <400>;
             key-positions = <53 54>;
-            bindings = <&kp LG(LALT)>;
+            bindings = <&kp LC(LALT)>;
         };
     };
 
