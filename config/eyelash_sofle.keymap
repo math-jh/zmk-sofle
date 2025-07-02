@@ -33,7 +33,6 @@
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
         tap-ms = <100>;
     };
 
@@ -41,9 +40,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
-        };
     };
-
 
     NavScr: NavScr {
         compatible = "zmk,behavior-tap-dance";
