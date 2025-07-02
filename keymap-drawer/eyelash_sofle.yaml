@@ -27,7 +27,7 @@ layers:
   - O
   - P
   - {t: \, s: '|'}
-  - $$mdi:apple-keyboard-command$$
+  - $$mdi:apple-keyboard-option$$
   - A
   - S
   - D
@@ -40,7 +40,7 @@ layers:
   - L
   - {t: ;, h: Sft+;, s: ':'}
   - {t: '''', h: Sft+', s: '"'}
-  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:apple-keyboard-caps$$', h: '$$mdi:apple-keyboard-shift$$'}
   - Z
   - X
   - C
@@ -60,7 +60,7 @@ layers:
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&univ'
+  - '&open'
   - $$mdi:keyboard-space$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
@@ -92,7 +92,7 @@ layers:
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:apple-keyboard-caps$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - RGB TOG
   - RGB EFF
   - RGB BRD
@@ -105,7 +105,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - Ctl+Gui+Alt+C
@@ -156,7 +156,7 @@ layers:
   - $$mdi:mouse-right-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - PG UP
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -169,7 +169,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - Scroll
   - {t: '$$mdi:transfer$$', type: trans}
-  - PG DN
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -264,9 +264,7 @@ combos:
 - p: [56, 60]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
 - p: [57, 59]
-  k: '&univa'
-- p: [59, 60]
-  k: {t: \, s: '|'}
+  k: '&open_alt'
 - p: [62, 63]
   k: Gui+$$mdi:apple-keyboard-option$$
 - p: [53, 54]
