@@ -269,3 +269,5 @@ combos:
   k: Gui+$$mdi:apple-keyboard-option$$
 - p: [53, 54]
   k: Ctl+$$mdi:apple-keyboard-option$$
+- p: [10, 11]
+  k: {t: '[', s: '{'}
