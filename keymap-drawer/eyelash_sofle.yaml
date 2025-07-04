@@ -13,7 +13,7 @@ layers:
   - {t: '8', h: Sft+8, s: '*'}
   - '&multirole_9'
   - '&multirole_0'
-  - '&multirole_bkt'
+  - '&multirole_pm'
   - $$mdi:keyboard-tab$$
   - Q
   - W
@@ -59,8 +59,8 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-command$$'}
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: 'Ctl+Gui+Sft+]', s: 'Ctl+Gui+Sft+}'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&leader'
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-command$$'}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
@@ -264,7 +264,7 @@ combos:
 - p: [56, 60]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
 - p: [57, 59]
-  k: Hyper+]
+  k: '&leader_alt'
 - p: [62, 63]
   k: Gui+$$mdi:apple-keyboard-option$$
 - p: [53, 54]
