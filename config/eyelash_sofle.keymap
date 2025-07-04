@@ -70,7 +70,7 @@
         compatible = "zmk,behavior-tap-dance";
         label = "multirole_9";
         #binding-cells = <0>;
-        bindings = <AS(N9)>, <AS(MINUS)>;
+        bindings = <AS(N9)>, <AS(LBKT)>;
         tapping-term-ms = <250>;
     };
 
@@ -78,7 +78,7 @@
         compatible = "zmk,behavior-tap-dance";
         label = "multirole_0";
         #binding-cells = <0>;
-        bindings = <AS(N0)>, <AS(EQUAL)>;
+        bindings = <AS(N0)>, <AS(RBKT)>;
         tapping-term-ms = <250>;
     };
 
@@ -86,7 +86,7 @@
         compatible = "zmk,behavior-tap-dance";
         label = "multirole_bkt";
         #binding-cells = <0>;
-        bindings = <AS(LBKT)>, <AS(RBKT)>;
+        bindings = <AS(MINUS)>, <AS(EQUAL)>;
         tapping-term-ms = <250>;
     };
 
@@ -111,6 +111,11 @@
             timeout-ms = <150>;
             key-positions = <53 54>;
             bindings = <&kp LC(LALT)>;
+        };
+        combo_final_consonant {
+            timeout-ms = <150>;
+            key-positions = <10 11>;
+            bindings = <&kp LBKT>;
         };
     };
 
