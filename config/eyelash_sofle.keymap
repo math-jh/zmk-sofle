@@ -94,7 +94,7 @@
         compatible = "zmk,behavior-tap-dance";
         label = "leader";
         #binding-cells = <0>;
-        bindings = <&leader_single>, <leader_double>;
+        bindings = <&leader_single>, <&leader_double>;
         tapping-term-ms = <250>;
     };
 
@@ -102,7 +102,7 @@
         compatible = "zmk,behavior-tap-dance";
         label = "leader_alt";
         #binding-cells = <0>;
-        bindings = <&leader_single_alt>, <leader_double_alt>;
+        bindings = <&leader_single_alt>, <&leader_double_alt>;
         tapping-term-ms = <250>;
     };
 
