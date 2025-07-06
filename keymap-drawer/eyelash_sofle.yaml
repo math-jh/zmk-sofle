@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_sofle}
 layers:
   Base:
-  - {t: '$$mdi:keyboard-esc$$', s: '`'}
+  - {t: '$$mdi:keyboard-esc$$', s: '&tilgr'}
   - {t: '1', h: Sft+1, s: '!'}
   - {t: '2', h: Sft+2, s: '@'}
   - {t: '3', h: Sft+3, s: '#'}
@@ -11,9 +11,9 @@ layers:
   - {t: '6', h: Sft+6, s: ^}
   - {t: '7', h: Sft+7, s: '&'}
   - {t: '8', h: Sft+8, s: '*'}
-  - '&multirole_9'
-  - '&multirole_0'
-  - '&multirole_pm'
+  - {t: '&multirole_9', s: '&shifted_multirole_9'}
+  - {t: '&multirole_0', s: '&shifted_multirole_0'}
+  - {t: '&multirole_pm', s: '&shifted_multirole_pm'}
   - $$mdi:keyboard-tab$$
   - Q
   - W
@@ -58,7 +58,7 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-command$$
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-command$$'}
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&leader'
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-command$$'}
