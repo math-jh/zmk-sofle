@@ -50,6 +50,14 @@
         tapping-term-ms = <275>;
     };
 
+    shifted_multirole_9: shifted_multirole_9 {
+        compatible = "zmk,behavior-tap-dance";
+        label = "shifted_multirole_9";
+        #binding-cells = <0>;
+        bindings = <&kp LPAR>, <&kp LBRC>;
+        tapping-term-ms = <275>;
+    };
+
     multirole_0: multirole_0 {
         compatible = "zmk,behavior-tap-dance";
         label = "multirole_0";
@@ -58,11 +66,27 @@
         tapping-term-ms = <275>;
     };
 
+    shifted_multirole_0: shifted_multirole_0 {
+        compatible = "zmk,behavior-tap-dance";
+        label = "shifted_multirole_0";
+        #binding-cells = <0>;
+        bindings = <&kp RPAR>, <&kp RBRC>;
+        tapping-term-ms = <275>;
+    };
+
     multirole_pm: multirole_plus_minus {
         compatible = "zmk,behavior-tap-dance";
         label = "multirole_pm";
         #binding-cells = <0>;
         bindings = <AS(MINUS)>, <AS(EQUAL)>;
+        tapping-term-ms = <275>;
+    };
+
+    shifted_multirole_pm: shifted_multirole_plus_minus {
+        compatible = "zmk,behavior-tap-dance";
+        label = "shifted_multirole_pm";
+        #binding-cells = <0>;
+        bindings = <&kp UNDER>, <&kp PLUS>;
         tapping-term-ms = <275>;
     };
 
@@ -135,6 +159,42 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        gtesc: grave_tilde_escape {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp ESC>, <&tilgr>;
+            mods = <(MOD_LGUI|MOD_LALT|MOD_LSFT|MOD_RGUI|MOD_RALT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>
+        };
+
+        bspc_del: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+            mods = <(MOD_LGUI|MOD_LALT|MOD_LSFT|MOD_RGUI|MOD_RALT|MOD_RSFT)>;
+        };
+
+        fast_multi_9: faster_multirole_9 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&multirole_9>, <&shifted_multirole_9>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        fast_multi_0: faster_multirole_0 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&multirole_0>, <&shifted_multirole_0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        fast_multi_pm: faster_multirole_pm {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&multirole_pm>, <&shifted_multirole_pm>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -142,11 +202,11 @@
 
         Base {
             bindings = <
-&gresc          AS(N1)    AS(N2)        AS(N3)        AS(N4)           AS(N5)         &kp UP_ARROW     AS(N6)   AS(N7)           AS(N8)     &multirole_9   &multirole_0   &multirole_pm
-&kp TAB         &kp Q     &kp W         &kp E         &kp R            &kp T          &kp DOWN_ARROW   &kp Y    &kp U            &kp I      &kp O          &kp P          &kp BACKSLASH
-&mta CAPS RALT  &kp A     &kp S         &kp D         &kp F            &kp G          &kp LEFT_ARROW   &kp H    &kp J            &kp K      &kp L          AS(SEMI)       AS(APOS)
-&kp LSHIFT      &kp Z     &kp X         &kp C         &kp V            &kp B          &kp RIGHT_ARROW  &kp N    &kp M            AS(COMMA)  AS(DOT)        AS(FSLH)       &mt RSHFT ENTER
-&kp C_MUTE      &llt 2 2  &kp LEFT_ALT  &kp LEFT_GUI  &mta LCMD SPACE  &kp BACKSPACE  &none            &leader  &mta LCMD SPACE  &kp LCTRL  &kp RALT       &mo 1
+&gtesc          AS(N1)    AS(N2)        AS(N3)        AS(N4)           AS(N5)     &kp UP_ARROW     AS(N6)   AS(N7)           AS(N8)     &fast_multi_9   &fast_multi_0   &fast_multi_pm
+&kp TAB         &kp Q     &kp W         &kp E         &kp R            &kp T      &kp DOWN_ARROW   &kp Y    &kp U            &kp I      &kp O           &kp P           &kp BACKSLASH
+&mta CAPS RALT  &kp A     &kp S         &kp D         &kp F            &kp G      &kp LEFT_ARROW   &kp H    &kp J            &kp K      &kp L           AS(SEMI)        AS(APOS)
+&kp LSHIFT      &kp Z     &kp X         &kp C         &kp V            &kp B      &kp RIGHT_ARROW  &kp N    &kp M            AS(COMMA)  AS(DOT)         AS(FSLH)        &mt RSHFT ENTER
+&kp C_MUTE      &llt 2 2  &kp LEFT_ALT  &kp LEFT_GUI  &mta LCMD SPACE  &bspc_del  &none            &leader  &mta LCMD SPACE  &kp LCTRL  &kp RALT        &mo 1
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
