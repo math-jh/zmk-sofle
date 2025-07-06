@@ -163,7 +163,7 @@
         gtesc: grave_tilde_escape {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp ESC>, <&tilgr>;
+            bindings = <&kp ESC>, <&kp GRAVE>;
             mods = <(MOD_LGUI|MOD_LALT|MOD_LSFT|MOD_RGUI|MOD_RALT|MOD_RSFT)>;
             keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
