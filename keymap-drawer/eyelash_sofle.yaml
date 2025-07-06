@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_sofle}
 layers:
   Base:
-  - {t: '$$mdi:keyboard-esc$$', s: '&tilgr'}
+  - {t: '$$mdi:keyboard-esc$$', s: '`'}
   - {t: '1', h: Sft+1, s: '!'}
   - {t: '2', h: Sft+2, s: '@'}
   - {t: '3', h: Sft+3, s: '#'}
