@@ -95,7 +95,7 @@
         combo_mac {
             timeout-ms = <150>;
             key-positions = <53 63>;
-            bindings = <&tog_on 2>;
+            bindings = <&tog_off 2>;
             layers = <2>;
         };
     };
