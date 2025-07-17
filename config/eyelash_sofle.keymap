@@ -110,15 +110,6 @@
             bindings = <&kp>, <&kp>;
         };
 
-        bspcd_sp: backspace_delete_special {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&to >, <&kp>;
-            display-name = "Mod-Tap";
-        };
-
         mta: mod_tap_alternative {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
