@@ -249,7 +249,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans    &trans 
             >;
 
-            label = "Nav";
+            label = "Sym";
             sensor-bindings = <&scroll_encoder>;
         };
     };
