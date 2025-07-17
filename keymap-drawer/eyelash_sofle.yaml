@@ -2,18 +2,18 @@ layout: {zmk_keyboard: eyelash_sofle}
 layers:
   MacBase:
   - {t: '$$mdi:keyboard-esc$$', s: '`'}
-  - {t: '1', h: Sft+1, s: '!'}
-  - {t: '2', h: Sft+2, s: '@'}
-  - {t: '3', h: Sft+3, s: '#'}
-  - {t: '4', h: Sft+4, s: $}
-  - {t: '5', h: Sft+5, s: '%'}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
   - $$mdi:arrow-up-bold$$
-  - {t: '6', h: Sft+6, s: ^}
-  - {t: '7', h: Sft+7, s: '&'}
-  - {t: '8', h: Sft+8, s: '*'}
-  - {t: '&multirole_9', s: '&shifted_multirole_9'}
-  - {t: '&multirole_0', s: '&shifted_multirole_0'}
-  - {t: '&multirole_pm', s: '&shifted_multirole_pm'}
+  - {t: '6', s: ^}
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - {t: '0', s: )}
+  - {t: '-', s: _}
   - $$mdi:keyboard-tab$$
   - Q
   - W
@@ -38,8 +38,8 @@ layers:
   - J
   - K
   - L
-  - {t: ;, h: Sft+;, s: ':'}
-  - {t: '''', h: Sft+', s: '"'}
+  - {t: ;, s: ':'}
+  - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-shift$$
   - Z
   - X
@@ -49,19 +49,19 @@ layers:
   - $$mdi:arrow-right-bold$$
   - N
   - M
-  - {t: ',', h: 'Sft+,', s: <}
-  - {t: ., h: Sft+., s: '>'}
-  - {t: /, h: Sft+/, s: '?'}
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
+  - {t: /, s: '?'}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:volume-off$$
   - {t: Nav, h: Nav}
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-command$$
-  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-command$$'}
+  - $$mdi:keyboard-space$$
   - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&leader'
-  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-command$$'}
+  - $$mdi:keyboard-space$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - MacFn
@@ -125,25 +125,25 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: WinBase, h: toggle}
+  - '&tog_on 2'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   WinBase:
   - {t: '$$mdi:keyboard-esc$$', s: '`'}
-  - {t: '1', h: Sft+1, s: '!'}
-  - {t: '2', h: Sft+2, s: '@'}
-  - {t: '3', h: Sft+3, s: '#'}
-  - {t: '4', h: Sft+4, s: $}
-  - {t: '5', h: Sft+5, s: '%'}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
   - $$mdi:arrow-up-bold$$
-  - {t: '6', h: Sft+6, s: ^}
-  - {t: '7', h: Sft+7, s: '&'}
-  - {t: '8', h: Sft+8, s: '*'}
-  - {t: '&multirole_9', s: '&shifted_multirole_9'}
-  - {t: '&multirole_0', s: '&shifted_multirole_0'}
-  - {t: '&multirole_pm', s: '&shifted_multirole_pm'}
+  - {t: '6', s: ^}
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - {t: '0', s: )}
+  - {t: '-', s: _}
   - $$mdi:keyboard-tab$$
   - Q
   - W
@@ -168,8 +168,8 @@ layers:
   - J
   - K
   - L
-  - {t: ;, h: Sft+;, s: ':'}
-  - {t: '''', h: Sft+', s: '"'}
+  - {t: ;, s: ':'}
+  - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-shift$$
   - Z
   - X
@@ -179,19 +179,19 @@ layers:
   - $$mdi:arrow-right-bold$$
   - N
   - M
-  - {t: ',', h: 'Sft+,', s: <}
-  - {t: ., h: Sft+., s: '>'}
-  - {t: /, h: Sft+/, s: '?'}
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
+  - {t: /, s: '?'}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:volume-off$$
   - {t: Nav, h: Nav}
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-command$$
-  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-command$$'}
+  - $$mdi:keyboard-space$$
   - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&leader'
-  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-command$$'}
+  - $$mdi:keyboard-space$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - WinFn
@@ -255,7 +255,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: MacBase, h: toggle}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -271,9 +271,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
+  - {t: '=', s: +}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -282,8 +282,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:mouse-left-click-outline$$
-  - $$mdi:mouse-right-click-outline$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -314,7 +314,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: MacBase, h: toggle, type: held}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -336,3 +336,9 @@ combos:
   k: Ctl+$$mdi:apple-keyboard-option$$
 - p: [9, 10]
   k: {t: '[', s: '{'}
+- p: [53, 63]
+  k: '&tog_on 2'
+  l: [MacBase]
+- p: [53, 63]
+  k: '&tog_on 2'
+  l: [WinBase]
