@@ -42,54 +42,6 @@
             bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
     };
 
-    multirole_9: multirole_9 {
-        compatible = "zmk,behavior-tap-dance";
-        label = "multirole_9";
-        #binding-cells = <0>;
-        bindings = <AS(N9)>, <AS(LBKT)>;
-        tapping-term-ms = <275>;
-    };
-
-    shifted_multirole_9: shifted_multirole_9 {
-        compatible = "zmk,behavior-tap-dance";
-        label = "shifted_multirole_9";
-        #binding-cells = <0>;
-        bindings = <&kp LPAR>, <&kp LBRC>;
-        tapping-term-ms = <275>;
-    };
-
-    multirole_0: multirole_0 {
-        compatible = "zmk,behavior-tap-dance";
-        label = "multirole_0";
-        #binding-cells = <0>;
-        bindings = <AS(N0)>, <AS(RBKT)>;
-        tapping-term-ms = <275>;
-    };
-
-    shifted_multirole_0: shifted_multirole_0 {
-        compatible = "zmk,behavior-tap-dance";
-        label = "shifted_multirole_0";
-        #binding-cells = <0>;
-        bindings = <&kp RPAR>, <&kp RBRC>;
-        tapping-term-ms = <275>;
-    };
-
-    multirole_pm: multirole_plus_minus {
-        compatible = "zmk,behavior-tap-dance";
-        label = "multirole_pm";
-        #binding-cells = <0>;
-        bindings = <AS(MINUS)>, <AS(EQUAL)>;
-        tapping-term-ms = <275>;
-    };
-
-    shifted_multirole_pm: shifted_multirole_plus_minus {
-        compatible = "zmk,behavior-tap-dance";
-        label = "shifted_multirole_pm";
-        #binding-cells = <0>;
-        bindings = <&kp UNDER>, <&kp PLUS>;
-        tapping-term-ms = <275>;
-    };
-
     macros {
         leader: snippet_leader {
             compatible = "zmk,behavior-macro";
@@ -134,6 +86,18 @@
             key-positions = <9 10>;
             bindings = <&kp LBKT>;
         };
+        combo_win {
+            timeout-ms = <150>;
+            key-positions = <53 63>;
+            bindings = <&tog_on 2>;
+            layers = <0>;
+        };
+        combo_mac {
+            timeout-ms = <150>;
+            key-positions = <53 63>;
+            bindings = <&tog_on 2>;
+            layers = <2>;
+        };
     };
 
     behaviors {
@@ -164,6 +128,14 @@
             bindings = <&kp>, <&kp>;
         };
 
+        mo_tog_on: mo_tog_on {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&tog_on>;
+        };
+
         gtesc: grave_tilde_escape {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -176,28 +148,29 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
-            mods = <(MOD_LGUI|MOD_LALT|MOD_LSFT|MOD_RGUI|MOD_RALT|MOD_RSFT)>;
+            mods = <(MOD_LALT|MOD_LSFT|MOD_RALT|MOD_RSFT)>;
         };
 
-        fast_multi_9: faster_multirole_9 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&multirole_9>, <&shifted_multirole_9>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+        tog_on: toggle_layer_on_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer On";
+            toggle-mode = "on";
         };
 
-        fast_multi_0: faster_multirole_0 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&multirole_0>, <&shifted_multirole_0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+        tog_off: toggle_layer_off_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer Off";
+            toggle-mode = "off";
         };
 
-        fast_multi_pm: faster_multirole_pm {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&multirole_pm>, <&shifted_multirole_pm>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+        mo_tog: behavior_mo_tog {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&tog>;
         };
     };
 
@@ -206,11 +179,11 @@
 
         MacBase {
             bindings = <
-&gtesc          AS(N1)    AS(N2)        AS(N3)        AS(N4)           AS(N5)     &kp UP_ARROW     AS(N6)   AS(N7)           AS(N8)     &fast_multi_9   &fast_multi_0   &fast_multi_pm
-&kp TAB         &kp Q     &kp W         &kp E         &kp R            &kp T      &kp DOWN_ARROW   &kp Y    &kp U            &kp I      &kp O           &kp P           &kp BACKSLASH
-&mta CAPS RALT  &kp A     &kp S         &kp D         &kp F            &kp G      &kp LEFT_ARROW   &kp H    &kp J            &kp K      &kp L           AS(SEMI)        AS(APOS)
-&kp LSHIFT      &kp Z     &kp X         &kp C         &kp V            &kp B      &kp RIGHT_ARROW  &kp N    &kp M            AS(COMMA)  AS(DOT)         AS(FSLH)        &mt RSHFT ENTER
-&kp C_MUTE      &llt 4 4  &kp LEFT_ALT  &kp LEFT_GUI  &mta LCMD SPACE  &bspc_del  &none            &leader  &mta LCMD SPACE  &kp LCTRL  &kp RALT        &mo 1
+&gtesc          &kp N1       &kp N2        &kp N3        &kp N4     &kp N5     &kp UP_ARROW     &kp N6   &kp N7     &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp TAB         &kp Q        &kp W         &kp E         &kp R      &kp T      &kp DOWN_ARROW   &kp Y    &kp U      &kp I      &kp O     &kp P     &kp BACKSLASH
+&mta CAPS RALT  &kp A        &kp S         &kp D         &kp F      &kp G      &kp LEFT_ARROW   &kp H    &kp J      &kp K      &kp L     &kp SEMI  &kp APOS
+&kp LSHIFT      &kp Z        &kp X         &kp C         &kp V      &kp B      &kp RIGHT_ARROW  &kp N    &kp M      &kp COMMA  &kp DOT   &kp FSLH  &mt RSHFT ENTER
+&kp C_MUTE      &mo_tog 5 4  &kp LEFT_ALT  &kp LEFT_GUI  &kp SPACE  &bspc_del  &none            &leader  &kp SPACE  &kp LCTRL  &kp RALT  &mo 1
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -223,7 +196,7 @@
 &out OUT_TOG     &bt BT_NXT       &bt BT_CLR       &trans                &trans          &trans          &trans  &trans             &trans             &trans      &kp LBKT    &kp RBKT        &trans
 &rgb_ug RGB_SPI  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &trans                &trans          &trans          &trans  &trans             &kp LC(LG(LA(J)))  &trans      &trans      &trans          &trans
 &rgb_ug RGB_SPD  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &kp LC(LG(LA(C)))     &trans          &trans          &trans  &kp LC(LG(LA(N)))  &trans             &trans      &trans      &trans          &trans
-&rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &trans           &trans                &trans          &trans          &trans  &to 2              &trans             &trans      &trans      &trans
+&rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &trans           &trans                &trans          &trans          &trans  &tog_on 2          &trans             &trans      &trans      &trans
             >;
             sensor-bindings = <&rgb_encoder>;
             display-name = "MacFn";
@@ -231,11 +204,11 @@
 
         WinBase {
             bindings = <
-&gtesc          AS(N1)    AS(N2)        AS(N3)        AS(N4)           AS(N5)     &kp UP_ARROW     AS(N6)   AS(N7)           AS(N8)     &fast_multi_9   &fast_multi_0   &fast_multi_pm
-&kp TAB         &kp Q     &kp W         &kp E         &kp R            &kp T      &kp DOWN_ARROW   &kp Y    &kp U            &kp I      &kp O           &kp P           &kp BACKSLASH
-&mta CAPS RALT  &kp A     &kp S         &kp D         &kp F            &kp G      &kp LEFT_ARROW   &kp H    &kp J            &kp K      &kp L           AS(SEMI)        AS(APOS)
-&kp LSHIFT      &kp Z     &kp X         &kp C         &kp V            &kp B      &kp RIGHT_ARROW  &kp N    &kp M            AS(COMMA)  AS(DOT)         AS(FSLH)        &mt RSHFT ENTER
-&kp C_MUTE      &llt 4 4  &kp LEFT_ALT  &kp LEFT_GUI  &mta LCMD SPACE  &bspc_del  &none            &leader  &mta LCMD SPACE  &kp LCTRL  &kp RALT        &mo 3
+&gtesc          &kp N1       &kp N2        &kp N3        &kp N4     &kp N5     &kp UP_ARROW     &kp N6   &kp N7     &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp TAB         &kp Q        &kp W         &kp E         &kp R      &kp T      &kp DOWN_ARROW   &kp Y    &kp U      &kp I      &kp O     &kp P     &kp BACKSLASH
+&mta CAPS RALT  &kp A        &kp S         &kp D         &kp F      &kp G      &kp LEFT_ARROW   &kp H    &kp J      &kp K      &kp L     &kp SEMI  &kp APOS
+&kp LSHIFT      &kp Z        &kp X         &kp C         &kp V      &kp B      &kp RIGHT_ARROW  &kp N    &kp M      &kp COMMA  &kp DOT   &kp FSLH  &mt RSHFT ENTER
+&kp C_MUTE      &mo_tog 5 4  &kp LEFT_ALT  &kp LEFT_GUI  &kp SPACE  &bspc_del  &none            &leader  &kp SPACE  &kp LCTRL  &kp RALT  &mo 3
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -248,7 +221,7 @@
 &out OUT_TOG     &bt BT_NXT       &bt BT_CLR       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LBKT  &kp RBKT  &trans
 &rgb_ug RGB_SPI  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans
 &rgb_ug RGB_SPD  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans
-&rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &trans           &trans  &trans  &trans  &trans  &to 0   &trans  &trans  &trans    &trans
+&rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans
             >;
             sensor-bindings = <&rgb_encoder>;
             display-name = "WinFn";
@@ -256,11 +229,24 @@
 
         Navigation {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_UP     &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_DOWN   &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_LEFT   &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_RIGHT  &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &to 0   &trans  &trans  &trans  &trans  &trans           &trans  &trans     &trans     &trans  &trans 
+&trans  &trans      &trans  &trans  &trans  &trans  &mmv MOVE_UP     &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans      &trans  &trans  &trans  &trans  &mmv MOVE_DOWN   &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans
+&trans  &trans      &trans  &trans  &trans  &trans  &mmv MOVE_LEFT   &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans      &trans  &trans  &trans  &trans  &mmv MOVE_RIGHT  &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &tog_off 4  &trans  &trans  &trans  &trans  &trans           &trans  &trans     &trans     &trans  &trans 
+            >;
+
+            label = "Nav";
+            sensor-bindings = <&scroll_encoder>;
+        };
+
+        Symbol {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_UP     &trans  &trans  &trans  &kp LBKT  &kp RBKT  &kp EQUAL
+&trans  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_DOWN   &trans  &trans  &trans  &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_LEFT   &trans  &trans  &trans  &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_RIGHT  &trans  &trans  &trans  &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans    &trans 
             >;
 
             label = "Nav";
