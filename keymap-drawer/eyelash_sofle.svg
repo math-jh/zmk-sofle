@@ -1458,7 +1458,7 @@ rect.held, rect.combo.held {
 <path d="M462,259 l303,0" class="combo"/>
 <rect rx="6" ry="6" x="448" y="246" width="28" height="26" class="combo"/>
 <text x="462" y="259" class="combo tap">
-<tspan x="462" dy="-0.6em" style="font-size: 86%">&amp;tog_on</tspan><tspan x="462" dy="1.2em" style="font-size: 86%">2</tspan>
+<tspan x="462" dy="-0.6em" style="font-size: 75%">&amp;tog_off</tspan><tspan x="462" dy="1.2em" style="font-size: 75%">2</tspan>
 </text>
 </g>
 </g>

@@ -405,5 +405,5 @@ combos:
   k: '&tog_on 2'
   l: [MacBase]
 - p: [53, 63]
-  k: '&tog_on 2'
+  k: '&tog_off 2'
   l: [WinBase]
