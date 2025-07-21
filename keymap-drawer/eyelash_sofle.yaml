@@ -58,7 +58,7 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-command$$
   - $$mdi:keyboard-space$$
-  - {t: '$$mdi:backspace$$', h: Sym, s: '$$mdi:backspace-reverse-outline$$'}
+  - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&leader'
   - $$mdi:keyboard-space$$
@@ -400,7 +400,11 @@ combos:
 - p: [53, 54]
   k: Ctl+$$mdi:apple-keyboard-option$$
 - p: [9, 10]
-  k: {t: '[', s: '{'}
+  k: {h: '[', s: '{'}
+- p: [10, 11]
+  k: {h: ']', s: '}'}
+- p: [11, 12]
+  k: {t: '=', s: +}
 - p: [53, 63]
   k: '&tog_on 2'
   l: [MacBase]
