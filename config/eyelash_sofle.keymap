@@ -124,9 +124,17 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&kp>, <&sl>;
+            bindings = <&kp>, <&slq>;
             display-name = "Layer-Tap";
         };
+
+        slq: sticky_layer_non_quick_release {
+            compatible = "zmk,behavior-sticky-key";
+            #binding-cells = <1>;
+            bindings = <&mo>;
+            release-after-ms = <1000>;
+            ignore-modifiers;
+          };
 
         gtesc: grave_tilde_escape {
             compatible = "zmk,behavior-mod-morph";
