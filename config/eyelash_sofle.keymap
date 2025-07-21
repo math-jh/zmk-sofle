@@ -119,12 +119,12 @@
             bindings = <&kp>, <&kp>;
         };
 
-        ltt: layer_tap_toggle {
+        lts: layer_tap_sticky {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&kp>, <&tog>;
+            bindings = <&kp>, <&sl>;
             display-name = "Layer-Tap";
         };
 
@@ -166,7 +166,7 @@
 &gtesc          &kp N1     &kp N2        &kp N3        &kp N4     &kp N5     &kp UP_ARROW     &kp N6   &kp N7     &kp N8     &kp N9    &kp N0    &kp MINUS
 &kp TAB         &kp Q      &kp W         &kp E         &kp R      &kp T      &kp DOWN_ARROW   &kp Y    &kp U      &kp I      &kp O     &kp P     &kp BACKSLASH
 &mta CAPS RALT  &kp A      &kp S         &kp D         &kp F      &kp G      &kp LEFT_ARROW   &kp H    &kp J      &kp K      &kp L     &kp SEMI  &kp APOS
-&ltt LSHFT 5    &kp Z      &kp X         &kp C         &kp V      &kp B      &kp RIGHT_ARROW  &kp N    &kp M      &kp COMMA  &kp DOT   &kp FSLH  &mt RSHFT ENTER
+&lts LSHFT 5    &kp Z      &kp X         &kp C         &kp V      &kp B      &kp RIGHT_ARROW  &kp N    &kp M      &kp COMMA  &kp DOT   &kp FSLH  &mt RSHFT ENTER
 &kp C_MUTE      &tog_on 4  &kp LEFT_ALT  &kp LEFT_GUI  &kp SPACE  &bspc_del  &none            &leader  &kp SPACE  &kp LCTRL  &kp RALT  &mo 1
             >;
 
@@ -191,7 +191,7 @@
 &gtesc          &kp N1     &kp N2        &kp N3        &kp N4     &kp N5     &kp UP_ARROW     &kp N6   &kp N7     &kp N8     &kp N9    &kp N0    &kp MINUS
 &kp TAB         &kp Q      &kp W         &kp E         &kp R      &kp T      &kp DOWN_ARROW   &kp Y    &kp U      &kp I      &kp O     &kp P     &kp BACKSLASH
 &mta CAPS RALT  &kp A      &kp S         &kp D         &kp F      &kp G      &kp LEFT_ARROW   &kp H    &kp J      &kp K      &kp L     &kp SEMI  &kp APOS
-&ltt LSHFT 5    &kp Z      &kp X         &kp C         &kp V      &kp B      &kp RIGHT_ARROW  &kp N    &kp M      &kp COMMA  &kp DOT   &kp FSLH  &mt RSHFT ENTER
+&lts LSHFT 5    &kp Z      &kp X         &kp C         &kp V      &kp B      &kp RIGHT_ARROW  &kp N    &kp M      &kp COMMA  &kp DOT   &kp FSLH  &mt RSHFT ENTER
 &kp C_MUTE      &tog_on 4  &kp LEFT_ALT  &kp LEFT_GUI  &kp SPACE  &bspc_del  &none            &leader  &kp SPACE  &kp LCTRL  &kp RALT  &mo 3
             >;
 
@@ -226,11 +226,11 @@
 
         Symbol {
             bindings = <
-&trans          &trans  &trans  &trans  &trans  &trans  &mmv MOVE_UP     &trans  &trans  &trans  &kp LBKT  &kp RBKT  &kp EQUAL
-&trans          &trans  &trans  &trans  &trans  &trans  &mmv MOVE_DOWN   &trans  &trans  &trans  &trans    &trans    &trans
-&trans          &trans  &trans  &trans  &trans  &trans  &mmv MOVE_LEFT   &trans  &trans  &trans  &trans    &trans    &trans
-&ltt LSHFT 5    &trans  &trans  &trans  &trans  &trans  &mmv MOVE_RIGHT  &trans  &trans  &trans  &trans    &trans    &trans
-&trans          &trans  &trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans    &trans 
+&trans     &trans  &trans  &trans  &trans  &trans  &mmv MOVE_UP     &trans  &trans  &trans  &kp LBKT  &kp RBKT  &kp EQUAL
+&trans     &trans  &trans  &trans  &trans  &trans  &mmv MOVE_DOWN   &trans  &trans  &trans  &trans    &trans    &trans
+&trans     &trans  &trans  &trans  &trans  &trans  &mmv MOVE_LEFT   &trans  &trans  &trans  &trans    &trans    &trans
+&kp LSHFT  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_RIGHT  &trans  &trans  &trans  &trans    &trans    &trans
+&trans     &trans  &trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans    &trans 
             >;
 
             label = "Sym";
