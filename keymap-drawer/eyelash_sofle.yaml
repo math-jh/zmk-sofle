@@ -83,14 +83,14 @@ layers:
   - {h: '$$mdi:arrow-down-bold$$', s: '$$mdi:bluetooth-connect$$'}
   - $$mdi:bluetooth-off$$
   - {t: '$$mdi:transfer$$', type: trans}
+  - Ctl+Gui+Alt+R
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
+  - Ctl+Gui+Alt+P
   - {t: '$$mdi:transfer$$', type: trans}
   - RGB SPI
   - RGB HUI
@@ -100,7 +100,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Ctl+Gui+Alt+J
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -110,13 +110,13 @@ layers:
   - RGB SAD
   - Ctl+Gui+Alt+C
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - Ctl+Gui+Alt+B
   - {t: '$$mdi:transfer$$', type: trans}
   - Ctl+Gui+Alt+N
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: Ctl+Gui+Alt+/, s: 'Ctl+Gui+Alt+?'}
   - {t: '$$mdi:transfer$$', type: trans}
   - RGB TOG
   - RGB EFF
