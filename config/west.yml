@@ -8,13 +8,15 @@ manifest:
       # - https://docs.zephyrproject.org/3.5.0/develop/west/manifest.html#projects
     - name: mctechnology17
       url-base: https://github.com/mctechnology17
+    - name: math-jh
+      url-base: https://github.com/math-jh
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: v0.3
       import: app/west.yml
     - name: zmk-nice-oled
-      remote: mctechnology17
-      revision: 46f824abb2bd41f1287c5c68abd14122af6042a3
+      remote: math-jh
+      revision: 0188dc793b982e008c2f702fa2e982f58cf72e87
   self:
     path: boards
